@@ -13,6 +13,7 @@ console.log("la data de process.env es "+ DB_USER) // remove this after you've c
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false,
   native: false,
+  dialectOptions: {ssl:{require: true}}
 });
 async function testConnection() {
   try {
